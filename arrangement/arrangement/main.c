@@ -2,15 +2,16 @@
 #include<stdlib.h> 
 
 
-#define NUM 10
+#define NUM 10 // 숫자의 갯수 
 int main()
 {
 	char a[NUM];
 	char b[NUM];
 	int i;
 
-	for (i = 0; i < NUM; i++) {
-		a[i] = i;
+	for (i = 0; i < NUM; i++)//10번 반복 
+	{
+		a[i] = i; // 10이 들어감 
 		b[i] = i;
 	}
 
@@ -22,17 +23,16 @@ int main()
 		a[j] = temp;
 	}
 
-
 	for (i = 0; i < NUM; i++) 
 	{
 		int j = rand() % NUM;   
 		int temp = b[i];
-		b[i] = b[j];
+		b[i] = b[j]; //이렇게 옮기는 과정이 없으면 중복이 된다.
 		b[j] = temp;
 	}
 
 
-	printf("a[] :");
+	printf("a[] :"); //앞에 표시 
 	for (int i = 0; i < NUM; i++) 
 	{
 		printf(" % d", a[i]);
